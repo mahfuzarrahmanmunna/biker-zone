@@ -1,34 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DaisyUI Test</title>
-    <!-- Google Font CDN Link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- DaisyUI plus TailwindCSS CDN Link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .poppins-font{
-            font-family: "Poppins", serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaisyUI Test</title>
+  <!-- Google Font CDN Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- DaisyUI plus TailwindCSS CDN Link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .poppins-font {
+      font-family: "Poppins", serif;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            btnColor: '#E76F51',
+            bannerBg: 'rgba(231, 111, 81, 0.1)',
+            headColor: 'rgba(10, 8, 38, 1)',
+          }
         }
-    </style>
+      }
+    }
+  </script>
 </head>
+
 <body class="poppins-font">
-    <!-- Header section -->
-     <header>
+  <!-- Header section -->
+  <header class="md:container mx-auto p-3">
+    <div class="navbar bg-base-100 flex justify-between items-center">
+      <div class="">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li><a>Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a>News</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </div>
+        <a class="font-bold text-xl">Bike Dekho</a>
+      </div>
+      <div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a>News</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="md:ml-12">
+          <a class="btn bg-btnColor text-white">Login</a>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Section /// Carousel-->
+    <div class="carousel w-full bg-bannerBg">
+      <!-- Slide-1 -->
+      <div id="slide1" class="carousel-item relative flex-col w-full">
+        <div class="md:flex md:justify-between md:items-center md:p-14">
+          <div class="md:m-7 p-3 space-y-7">
+            <h1 class="text-4xl md:text-6xl font-bold">
+              Ride-on R15 V4 <br> with Smile
+            </h1>
+            <p class="text-gray-500">
+              Amet minim mollit non deserunt ullamco <br>
+              est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.
+            </p>
+            <button class="btn bg-btnColor text-white">
+              Purchase
+            </button>
+          </div>
+          <div class="mb-5">
+            <img src="images/slider/bike1.png" alt="">
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide4" class="btn btn-circle invisible lg:visible">❮</a>
+          <a href="#slide2" class="btn btn-circle invisible lg:visible">❯</a>
+        </div>
+      </div>
+      <!-- Slide-2 -->
+      <div id="slide2" class="carousel-item relative flex-col w-full">
+        <div class="md:flex md:justify-between md:items-center md:p-14">
+          <div class="md:m-7 p-3 space-y-7">
+            <h1 class="text-4xl md:text-6xl font-bold">
+              Ride-on R15 V4 <br> with Smile
+            </h1>
+            <p class="text-gray-500 text-base">
+              Amet minim mollit non deserunt ullamco <br>
+              est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.
+            </p>
+            <button class="btn bg-btnColor text-white">
+              Purchase
+            </button>
+          </div>
+          <div class="mb-5">
+            <img src="images/slider/bike2.png" alt="">
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide1" class="btn btn-circle invisible lg:visible">❮</a>
+          <a href="#slide3" class="btn btn-circle invisible lg:visible">❯</a>
+        </div>
+      </div>
+      <!-- Slide-3 -->
+      <div id="slide3" class="carousel-item relative flex-col w-full">
+        <div class="md:flex md:justify-between md:items-center md:p-14">
+          <div class="md:m-7 p-3 space-y-7">
+            <h1 class="text-4xl md:text-6xl font-bold">
+              Ride-on R15 V4 <br> with Smile
+            </h1>
+            <p class="text-gray-500">
+              Amet minim mollit non deserunt ullamco <br>
+              est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.
+            </p>
+            <button class="btn bg-btnColor text-white">
+              Purchase
+            </button>
+          </div>
+          <div class="mb-5">
+            <img src="images/slider/bike3.png" alt="">
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide2" class="btn btn-circle invisible lg:visible">❮</a>
+          <a href="#slide4" class="btn btn-circle invisible lg:visible">❯</a>
+        </div>
+      </div>
+      <!-- Slide-4 -->
+      <div id="slide4" class="carousel-item relative flex-col w-full">
+        <div class="md:flex md:justify-between md:items-center md:p-14">
+          <div class="md:m-7 p-3 space-y-7">
+            <h1 class="text-4xl md:text-6xl font-bold">
+              Ride-on R15 V4 <br> with Smile
+            </h1>
+            <p class="text-gray-500">
+              Amet minim mollit non deserunt ullamco <br>
+              est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.
+            </p>
+            <button class="btn bg-btnColor text-white">
+              Purchase
+            </button>
+          </div>
+          <div class="mb-5">
+            <img src="images/slider/bike4.png" alt="">
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide3" class="btn btn-circle invisible lg:visible">❮</a>
+          <a href="#slide1" class="btn btn-circle invisible lg:visible">❯</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Section -->
+  <main class=" container mx-auto">
+    <!-- Fetured Section -->
+    <section class="mt-24 md:mt-16">
+      <h3 class="font-semibold text-5xl text-center">
+        Fetured Bikes In This Year
+      </h3>
+      <span class="text-btnColor text-center font-bold">
+        Best bike collection
+      </span>
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:mt-28 lg:mb-40 p-3">
+        <div class="">
+          <img class="w-full" src="images/others/latest1.png" alt="">
+        </div>
+        <div class="">
+          <img class="w-full" src="images/others/latest2.png" alt="">
+        </div>
+        <div class="">
+          <img class="w-full" src="images/others/latest3.png" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- News Section -->
+    <section class="mt-16 px-3">
+      <h2 class="text-5xl font-semibold text-headColor mb-12 text-center">
+        latest News
+      </h2>
+      <div class="gap-4 flex flex-col md:flex-row lg:flex-row">
+        <!-- Card-1 -->
+        <div class="card card-compact bg-base-100 md:w-96 shadow-xl  space-y-5 ">
+          <figure class="">
+            <img class="pt-5" src="images/others/latest1.png" alt="" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+            <p class="text-gray-500">
+              The Ducati XDiavel S-73 is a powerful cruiser that combines cutting-edge performance with bold Italian
+              design, featuring
+              a 1262cc Testastretta DVT engine for thrilling acceleration.
+            </p>
+            <div class="card-actions">
+              <button class="btn bg-btnColor text-white">Read More</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card-2 -->
+        <div class="card card-compact bg-base-100 md:w-96 shadow-xl  space-y-5 ">
+          <figure class="">
+            <img class="pt-5" src="images/others/latest2.png" alt="" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+            <p class="text-gray-500">
+              The Ducati XDiavel S-73 is a powerful cruiser that combines cutting-edge performance with bold Italian
+              a 1262cc Testastretta DVT engine for thrilling acceleration.
+            </p>
+            <div class="card-actions">
+              <button class="btn bg-btnColor text-white">Read More</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card-3 -->
+        <div class="card card-compact bg-base-100 md:w-96 shadow-xl  space-y-5 ">
+          <figure class="">
+            <img class="pt-5" src="images/others/latest3.png" alt="" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+            <p class="text-gray-500">
+              The Ducati XDiavel S-73 is a powerful cruiser that combines cutting-edge performance with bold Italian
+              design, featuring
+              a 1262cc Testastretta DVT engine for thrilling acceleration.
+            </p>
+            <div class="card-actions">
+              <button class="btn bg-btnColor text-white">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer Section -->
+  <footer>
 
-     </header>
-     <!-- Main Section -->
-      <main>
-
-      </main>
-      <!-- Footer Section -->
-       <footer>
-
-       </footer>
+  </footer>
 </body>
+
 </html>
